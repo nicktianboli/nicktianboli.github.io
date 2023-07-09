@@ -1,9 +1,15 @@
-title: Hamilton
-description: A minimal and beautiful Jekyll theme best for writing and note-taking.
-author: Shangzhi Huang
+title: Tianbo Li
+description: Personal homepage.
+author: Tianbo Li
 avatar: /logo.png
-email: ngzhio@gmail.com
+email: litb@sea.com
+email2: li_tianbo@live.com
+skin: daylight
+subscribe: False
+location: Singapore
 
+
+#######
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
@@ -29,15 +35,45 @@ exclude:
 
 # Jekyll SEO Tag (Optional)
 # =========================
-twitter:
-  username: ngzhio
-  card: summary
+# twitter:
+#   username: ngzhio
+#   card: summary
+
 logo: logo.png
 social:
-  name: Shangzhi Huang
+  name: Tianbo Li
   links:
-    - https://twitter.com/ngzhio
-    - https://www.facebook.com/ngzhio
-    - https://github.com/ngzhio
-google_site_verification: u4WXQl0Eu66rsQo2kRdCNx
+    # - https://twitter.com/ngzhio
+    # - https://www.facebook.com/ngzhio
+    - https://github.com/nicktianboli
+# google_site_verification: u4WXQl0Eu66rsQo2kRdCNx
 lang: en
+
+
+######
+profile: This is Tianbo Li from <a href="https://sail.sea.com/">SEA AI LAB</a>.
+
+
+
+#####
+education_items:
+  - institution: Nanyang Technological University, Singapore
+    abbr: ntu
+    location: Singapore
+    degree: Ph.D
+    major: Computer Science
+    date: "2017.1 - 2021.2"
+    description:
+  - institution: Renmin University of China
+    abbr: ruc
+    location: "Beijing, China"
+    degree: M.Econ
+    major: Risk Management and Actuarial Science
+    date: "2014.9 - 2017.1"
+    description: 
+  - institution: Renmin University of China
+    abbr: ruc
+    location: "Beijing, China"
+    degree: B.S
+    major: Statistics
+    date: "2010.9 - 2014.6"

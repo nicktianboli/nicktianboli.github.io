@@ -13,8 +13,8 @@
   <ul class="contact-list">
     {% if site.author -%}
       <li>
-        <i class="sidebar-icon fas fa-at"></i>
-        <span class="contact-info p-name">{{ site.author | escape }}</span>
+        <i class="sidebar-icon fas fa-user"></i>
+        <span class="contact-info p-name" style="font-size: 16px; font-weight: bold;">{{ site.author | escape }}</span>
       </li>
     {%- endif %}
     {% if site.email -%}
@@ -22,6 +22,12 @@
         <i class="sidebar-icon fas fa-envelope"></i>
         <a class="contact-info u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
       </li>
+    {%- endif %}
+    {% if site.email2 -%}
+    <li>
+      <i class="sidebar-icon fas fa-envelope"></i>
+      <a class="contact-info u-email2" href="mailto:{{ site.email2 }}">{{ site.email2 }}</a>
+    </li>
     {%- endif %}
     {% if site.location -%}
       <li>

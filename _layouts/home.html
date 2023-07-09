@@ -2,7 +2,96 @@
 layout: default
 ---
 
-<div class="home">
+<style>
+  .block {
+    border-bottom: 0.1px solid #c4c4c4;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+</style>
+
+<!-- <style>
+  .education ul {
+    line-height: 0.5; /* Adjust the line spacing as desired */
+    margin-top: 0; /* Remove any top margin to reduce the spacing */
+  }
+</style> -->
+
+<style>
+  h1 {
+    font-family: Arial, sans-serif;
+  }
+</style>
+
+<style>
+  .education ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.2; /* Adjust the line spacing as desired */
+    margin-top: 0; /* Remove any top margin to reduce the spacing */
+  }
+
+  .education ul li {
+    position: relative;
+    padding-left: 80px; /* Adjust the spacing between the logo and the content as needed */
+    margin-bottom: 50px; /* Adjust the spacing between list items as needed */
+    margin-top: 50px
+  }
+
+  .education ul li .logo {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px; /* Adjust the logo width as needed */
+    height: auto;
+  }
+
+  .education ul li p {
+    margin-top: -30px; /* Add this line to remove top margin */
+    margin-bottom: 30px; /* Adjust the value to reduce the space */
+  }
+</style>
+
+<div class=block>
+  <header>
+    <h1>Tianbo Li</h1>
+  </header>
+  <p>
+    Tianbo Li is currently a research scientist at <a href="https://sail.sea.com/">SEA AI Lab</a>.
+    He obtained his Ph.D from <a href="https://www.ntu.edu.sg/">Nanyang Technological University, Singapore</a>,
+    under the supervison of <a href='https://scholar.google.com/citations?user=30Fp0YYAAAAJ&hl=en'> Prof. Yiping Ke</a>.
+  </p>
+</div>
+
+<div class=block>
+  <div class="education">
+    <header>
+      <h2> Education </h2>
+    </header>
+    <ul class="fa-ul">
+      {% for item in site.education_items %}
+        <li>
+          <!-- <span class="fa-li"><i class="fab fa-github"></i></span> -->
+          <img class="logo" src="{{ '/assets/image/' | relative_url }}{{ item.abbr | slugify }}.png" alt="{{ item.abbr }} logo">
+          <h3 class="institution">{{ item.institution }}</h3>
+          <p>{{ item.degree }} in {{ item.major }} <br>
+            {{ item.date }}, {{ item.location }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class=block>
+  <header>
+    <h2> Projects </h2>
+  </header>
+</div>
+
+
+<!-- <div class="home">
+
 
   {{ content }}
 
@@ -10,9 +99,9 @@ layout: default
     {% assign posts = paginator.posts %}
   {% else %}
     {% assign posts = site.posts %}
-  {% endif %}
+  {% endif %} -->
 
-  {%- if posts.size > 0 -%}
+  <!-- {%- if posts.size > 0 -%}
     <ul class="post-list">
       {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
@@ -61,5 +150,5 @@ layout: default
   
   {%- if jekyll.environment == "production" and site.disqus -%}
     <script id="dsq-count-scr" src="//{{ site.disqus }}.disqus.com/count.js" async></script>
-  {%- endif -%}
-</div>
+  {%- endif -%} -->
+<!-- </div> -->

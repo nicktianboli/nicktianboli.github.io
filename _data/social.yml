@@ -1,6 +1,14 @@
-- title: Twitter
-  url: https://twitter.com/ngzhio
-  icon: fab fa-twitter
+# - title: Twitter
+#   url: https://twitter.com/ngzhio
+#   icon: fab fa-twitter
 - title: GitHub
-  url: https://github.com/ngzhio/jekyll-theme-hamilton
+  url: https://github.com/nicktianboli
   icon: fab fa-github
+
+- title: LinkedIn
+  url: https://www.linkedin.com/in/tianbo-l-387a45255/
+  icon: fab fa-linkedin
+
+- title: SAIL
+  url: https://sail.sea.com/
+  icon: fas fa-building
