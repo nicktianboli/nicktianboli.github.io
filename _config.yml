@@ -110,7 +110,6 @@ project_items:
     ORlink: https://openreview.net/forum?id=aQuqw6eVKP
     intro: "In this work, we propose neural integral functional (NIF), which is a general functional approximator that suits a large number of scientific problems including the brachistochrone curve problem in classical physics and density functional theory in quantum physics."
 
-
   - name: kdd
     title: "Mitigating Performance Saturation in Neural Marked Point Processes: Architectures and Loss Functions"
     author: Tianbo Li, Tianze Luo, Yiping Ke, Sinno Jialin Pan
@@ -119,5 +118,23 @@ project_items:
     path: /assets/project/kdd/
     intro: This work introduces a Graph Convolutional Hawkes Process (GCHP) method incorperating marked point processes model to deal with predictions on attributed event sequences.
 
+  - name: thp
+    venue: AAAI 2020
+    title: "Tweedie-Hawkes Processes: Interpreting the Phenomena of Outbreaks"
+    path: /assets/project/thp/
+    author: Tianbo Li, Yiping Ke
+    intro: In this paper, we propose a Bayesian model called Tweedie-Hawkes Processes (THP), which is able to model the outbreaks of events and find out the dominant factors behind. THP leverages on the Tweedie distribution in capturing various excitation effects. A variational EM algorithm is developed for model inference.
 
-  
+  - name: thinning
+    venue: NeurIPS 2019
+    title: Thinning for Accelerating the Learning of Point Processes
+    path: /assets/project/thinning/
+    author: Tianbo Li, Yiping Ke
+    intro: This paper discusses one of the most fundamental issues about point processes that what is the best sampling method for point processes. We propose thinning as a downsampling method for accelerating the learning of point processes. We find that the thinning operation preserves the structure of intensity, and is able to estimate parameters with less time and without much loss of accuracy. 
+
+  - name: transfer
+    venue: ICDM 2018
+    title: Transfer hawkes processes with content information
+    path: /assets/project/transfer/
+    author: Tianbo Li, Pengfei Wei, Yiping Ke
+    intro: In this paper,we propose a novel model called transfer Hybrid Least Square for Hawkes (trHLSH) that incorporates Hawkes processes with content and cross-domain information. 

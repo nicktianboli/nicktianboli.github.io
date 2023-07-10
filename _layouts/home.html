@@ -46,10 +46,9 @@ layout: default
     margin-top: 0px;
   }
   .author {
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
     padding-top: 2px;
     padding-bottom: 6px;
     margin-top: -32px;
@@ -110,8 +109,8 @@ layout: default
     He obtained his Ph.D from <a href="https://www.ntu.edu.sg/">Nanyang Technological University, Singapore</a>,
     under the supervison of <a href='https://scholar.google.com/citations?user=30Fp0YYAAAAJ&hl=en'> Prof. Yiping Ke</a>.
     Prior to that, he received both his degrees of Bacholer and Master from the School of Statistcs, Renmin University of China.
-    Collaborating closely with <a href="https://cde.nus.edu.sg/mse/staff/novoselov-konstantin-sergeevich/"> Prof. Konstantin Novoselov FRS</a>,
-    Tianbo is actively involved with <a href="https://ifim.nus.edu.sg/">Institute for Functional Intelligent Materials (I-FIM)</a>.
+    Collaborating closely with <a href="https://cde.nus.edu.sg/mse/staff/novoselov-konstantin-sergeevich/"> Prof. Konstantin S. Novoselov</a>,
+    Tianbo is actively involved with <a href="https://ifim.nus.edu.sg/">Institute for Functional Intelligent Materials (I-FIM)</a>, National University of Singapore.
     Besides his focus on AI for Science, he also has a keen interest in statistical 
     machine learning and exploring stochastic processes for deep learning.
   </p>
@@ -119,10 +118,10 @@ layout: default
 
 <div class=block>
   <div style="display: flex;">
-    <div style="flex-basis: 10%; padding-right: 10px;">
+    <div style="flex-basis: 15%; padding-right: 10px;">
       <img src="/assets/image/hiring.png" alt="hiring" style="max-width: 100%; height: auto;">
     </div>
-    <div style="flex-basis: 90%;">
+    <div style="flex-basis: 85%;">
       <p>We are currently hiring research interns working on AI for Science (Quantum Chemistry), based in Singapore.
         To learn more about our research, please see and apply via the following link: <br></p>
       <p style="margin-top: -20px; margin-bottom: 15px; font-size:18px"> <a href="https://career.sea.com/position/J00215947"> application entrance </a> </p> 
@@ -162,7 +161,9 @@ layout: default
     {% for item in site.project_items %}
       <p class="venue"> {{ item.venue }} </p>
       <h4> {{ item.title }} </h4>
-      <p class="author"> {{ item.author }} </p>
+      <p class="author"> 
+        {{ item.author | replace: "Tianbo Li", "<b>Tianbo Li</b>"}}
+      </p>
       <body>
         <div class="projectitem">
             <div class="image">
