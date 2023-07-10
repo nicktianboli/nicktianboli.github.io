@@ -11,6 +11,7 @@ layout: default
   }
   .projectitem {
       display: flex;
+      margin-top: 4px;
       width: 100%;
   }
   .image {
@@ -21,6 +22,7 @@ layout: default
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      vertical-align: middle;
   }
   .projecttext {
       font-size: 12px;
@@ -35,18 +37,23 @@ layout: default
       margin-top: -40px;
   }
   .venue {
-    font-size: 20px;
+    font-size: 18px;
     font-family: monospace;
-    font-weight: normal;
-    margin-bottom: -5px;
+    font-weight: bold;
+    padding-top: 6px;
+    padding-bottom: 2px;
+    margin-bottom: -4px;
     margin-top: 0px;
   }
   .author {
     font-size: 12px;
+    font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
-    margin-top: -36px;
-    margin-bottom: 6px;
+    padding-top: 2px;
+    padding-bottom: 6px;
+    margin-top: -32px;
+    margin-bottom: 0px;
   }
 </style>
 
@@ -102,7 +109,7 @@ layout: default
     where his primary research area is <b style="font-family: Arial, sans-serif;">AI for Quantum Chemistry and Material Science. </b>
     He obtained his Ph.D from <a href="https://www.ntu.edu.sg/">Nanyang Technological University, Singapore</a>,
     under the supervison of <a href='https://scholar.google.com/citations?user=30Fp0YYAAAAJ&hl=en'> Prof. Yiping Ke</a>.
-    Prior to that, he recieved both his degrees of Bacholer and Master from the School of Statistcs, Renmin University of China.
+    Prior to that, he received both his degrees of Bacholer and Master from the School of Statistcs, Renmin University of China.
     Collaborating closely with <a href="https://cde.nus.edu.sg/mse/staff/novoselov-konstantin-sergeevich/"> Prof. Konstantin Novoselov FRS</a>,
     Tianbo is actively involved with <a href="https://ifim.nus.edu.sg/">Institute for Functional Intelligent Materials (I-FIM)</a>.
     Besides his focus on AI for Science, he also has a keen interest in statistical 
@@ -163,20 +170,16 @@ layout: default
             </div>
             <div class="content">
                 <div class="projecttext">
-                    <!-- <h2>Title</h2> -->
                     <p> {{ item.intro }}</p>
                 </div>
                 <div class="buttons">
                     {%- if item.ORlink -%}
                       [<a href="{{ item.ORlink }}" style="font-size: 16px;"> Open Review</a>]
                     {%- endif -%}
-
                     {%- if item.githublink -%}
-                      [<a href="{{ item.ORlink }}" style="font-size: 16px;"> Github</a>]
+                      [<a href="{{ item.githublink }}" style="font-size: 16px;"> Github</a>]
                     {%- endif -%}
-
                     [<a href="{{ item.path }}paper.pdf" style="font-size: 16px;"> Paper</a>]
-                    
                 </div>
             </div>
         </div>

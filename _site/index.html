@@ -140,6 +140,7 @@
   }
   .projectitem {
       display: flex;
+      margin-top: 4px;
       width: 100%;
   }
   .image {
@@ -150,6 +151,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      vertical-align: middle;
   }
   .projecttext {
       font-size: 12px;
@@ -164,18 +166,23 @@
       margin-top: -40px;
   }
   .venue {
-    font-size: 20px;
+    font-size: 18px;
     font-family: monospace;
-    font-weight: normal;
-    margin-bottom: -5px;
+    font-weight: bold;
+    padding-top: 6px;
+    padding-bottom: 2px;
+    margin-bottom: -4px;
     margin-top: 0px;
   }
   .author {
     font-size: 12px;
+    font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
-    margin-top: -36px;
-    margin-bottom: 6px;
+    padding-top: 2px;
+    padding-bottom: 6px;
+    margin-top: -32px;
+    margin-bottom: 0px;
   }
 </style>
 
@@ -231,7 +238,7 @@
     where his primary research area is <b style="font-family: Arial, sans-serif;">AI for Quantum Chemistry and Material Science. </b>
     He obtained his Ph.D from <a href="https://www.ntu.edu.sg/">Nanyang Technological University, Singapore</a>,
     under the supervison of <a href='https://scholar.google.com/citations?user=30Fp0YYAAAAJ&hl=en'> Prof. Yiping Ke</a>.
-    Prior to that, he recieved both his degrees of Bacholer and Master from the School of Statistcs, Renmin University of China.
+    Prior to that, he received both his degrees of Bacholer and Master from the School of Statistcs, Renmin University of China.
     Collaborating closely with <a href="https://cde.nus.edu.sg/mse/staff/novoselov-konstantin-sergeevich/"> Prof. Konstantin Novoselov FRS</a>,
     Tianbo is actively involved with <a href="https://ifim.nus.edu.sg/">Institute for Functional Intelligent Materials (I-FIM)</a>.
     Besides his focus on AI for Science, he also has a keen interest in statistical 
@@ -312,11 +319,9 @@
             </div>
             <div class="content">
                 <div class="projecttext">
-                    <!-- <h2>Title</h2> -->
                     <p> In this work, we propose a deep learning approach to KS-DFT. We propose to directly minimize the total energy by reparameterizing the orthogonal constraint as a feed-forward computation. We prove that such an approach has the same expressivity as the SCF method, yet reduces the computational complexity from O(N^4) to O(N^3).</p>
                 </div>
-                <div class="buttons">[<a href="https://openreview.net/forum?id=aBWnqqsuot7" style="font-size: 16px;"> Open Review</a>][<a href="https://openreview.net/forum?id=aBWnqqsuot7" style="font-size: 16px;"> Github</a>][<a href="/assets/project/d4ft/paper.pdf" style="font-size: 16px;"> Paper</a>]
-                    
+                <div class="buttons">[<a href="https://openreview.net/forum?id=aBWnqqsuot7" style="font-size: 16px;"> Open Review</a>][<a href="https://github.com/sail-sg/d4ft" style="font-size: 16px;"> Github</a>][<a href="/assets/project/d4ft/paper.pdf" style="font-size: 16px;"> Paper</a>]
                 </div>
             </div>
         </div>
@@ -333,11 +338,9 @@
             </div>
             <div class="content">
                 <div class="projecttext">
-                    <!-- <h2>Title</h2> -->
                     <p> In this work, we make two major contributions to bridging this gap. Based on a pleasant observation that (under certain conditions) the SWF of joint distributions coincides with those of conditional distributions, we propose CSWF that enables nonparametric conditional modeling. We introduce appropriate inductive biases of images into SWF which greatly improve the efficiency and quality of modeling images.</p>
                 </div>
                 <div class="buttons">[<a href="https://openreview.net/forum?id=cOngPVufCF" style="font-size: 16px;"> Open Review</a>][<a href="/assets/project/nonparametric/paper.pdf" style="font-size: 16px;"> Paper</a>]
-                    
                 </div>
             </div>
         </div>
@@ -354,11 +357,9 @@
             </div>
             <div class="content">
                 <div class="projecttext">
-                    <!-- <h2>Title</h2> -->
                     <p> In this work, we propose neural integral functional (NIF), which is a general functional approximator that suits a large number of scientific problems including the brachistochrone curve problem in classical physics and density functional theory in quantum physics.</p>
                 </div>
                 <div class="buttons">[<a href="https://openreview.net/forum?id=aQuqw6eVKP" style="font-size: 16px;"> Open Review</a>][<a href="/assets/project/nif/paper.pdf" style="font-size: 16px;"> Paper</a>]
-                    
                 </div>
             </div>
         </div>
@@ -375,11 +376,9 @@
             </div>
             <div class="content">
                 <div class="projecttext">
-                    <!-- <h2>Title</h2> -->
                     <p> This work introduces a Graph Convolutional Hawkes Process (GCHP) method incorperating marked point processes model to deal with predictions on attributed event sequences.</p>
                 </div>
-                <div class="buttons">[<a href="" style="font-size: 16px;"> Github</a>][<a href="/assets/project/kdd/paper.pdf" style="font-size: 16px;"> Paper</a>]
-                    
+                <div class="buttons">[<a href="https://github.com/ltz0120/Graph-Convolutional-Hawkes-Processes-GCHP" style="font-size: 16px;"> Github</a>][<a href="/assets/project/kdd/paper.pdf" style="font-size: 16px;"> Paper</a>]
                 </div>
             </div>
         </div>
@@ -409,7 +408,7 @@
         <p class="post-meta">
           <time class="dt-published" datetime="2023-07-08T00:00:00+08:00" itemprop="datePublished">
             Jul 8, 2023
-          </time></p><div class="post-excerpt">Sea group is seeking research interns to join Sea AI Lab (SAIL). SAIL focuses on fundamental research and application research on Artificial Intelligence (AI), which include deep learning, reinforcement learning, computer vision, natural language processing, etc. Our research interns have an opportunity to make core algorithmic advances and apply their ideas at the core research projects at SAIL. This internship has a minimum 6-month duration. The ideal candidate should have an enthusiasm in advancing the understanding of intelligence and a passion for ambitious breakthroughs in AI. To learn more about our research and our lab, please visit https://sail.sea.com/
+          </time></p><div class="post-excerpt">In many
 
 </div></li><li>
         <h2>

@@ -86,7 +86,7 @@ education_items:
 project_items:
   - name: d4ft
     title: "D4FT: A Deep Learning Approach to Kohn-Sham Density Functional Theory"
-    author: Tianbo Li, Min Lin, Zheyuan Hu, Kunhao Zheng, Giovanni Vignale, Kenji Kawaguchi, A.H. Castro Neto, Kostya S. Novoselov, Shuicheng Yan
+    author: Tianbo Li, Min Lin, Zheyuan Hu, Kunhao Zheng, Giovanni Vignale, Kenji Kawaguchi, A. H. Castro Neto, Kostya S. Novoselov, Shuicheng Yan
     venue: "ICLR 2023 (Spotlight)"
     path: /assets/project/d4ft/
     ORlink: "https://openreview.net/forum?id=aBWnqqsuot7"
