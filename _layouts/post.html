@@ -2,16 +2,21 @@
 layout: default
 ---
 
+<style>
+  * {
+    border: none !important;
+  }
+</style>
+
+
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
   <header class="post-header">
-
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
+    <a href="/blog.html">
+      <h1 class="post-title p-name" itemprop="name headline" style="font-size: 32px; border: none;">{{ page.title | escape }}</h1>
+    </a>
+    <p class="post-meta" style="margin-bottom: 5px; border: none;">
       {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: date_format }}
-      </time>
+
       {%- if page.last_modified_at -%}
         ~ 
         {%- assign mdate = page.last_modified_at | date_to_xmlschema -%}
@@ -20,17 +25,20 @@ layout: default
         </time>
       {%- endif -%}
       {%- if page.author -%}
-        • {% for author in page.author %}
+        {% for author in page.author %}
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-            {%- if forloop.last == false %}, {% endif -%}
+            <span class="p-author h-card" itemprop="name", style="place-items: center">{{ author }}</span></span>
+            {%- if forloop.last == false %}, {% endif -%} <br>
         {% endfor %}
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" style="place-items: center">
+          {{ page.date | date: date_format }}
+        </time>
       {%- endif -%}
     </p>
-
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <div class="post-content e-content" itemprop="articleBody" style="font-size: 
+  18px; font-family: Open Sans; margin-top: -100px; border: none", >
     {{ content }}
   </div>
 

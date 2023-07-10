@@ -64,6 +64,7 @@ education_items:
     major: Computer Science
     date: "2017.1 - 2021.2"
     description:
+    link: "https://www.ntu.edu.sg"
   - institution: Renmin University of China
     abbr: ruc
     location: "Beijing, China"
@@ -71,9 +72,52 @@ education_items:
     major: Risk Management and Actuarial Science
     date: "2014.9 - 2017.1"
     description: 
+    link: "https://www.ruc.edu.cn/en"
   - institution: Renmin University of China
     abbr: ruc
     location: "Beijing, China"
     degree: B.S
     major: Statistics
     date: "2010.9 - 2014.6"
+    link: "https://www.ruc.edu.cn/en"
+
+
+############### projects ######################333
+project_items:
+  - name: d4ft
+    title: "D4FT: A Deep Learning Approach to Kohn-Sham Density Functional Theory"
+    author: Tianbo Li, Min Lin, Zheyuan Hu, Kunhao Zheng, Giovanni Vignale, Kenji Kawaguchi, A.H. Castro Neto, Kostya S. Novoselov, Shuicheng Yan
+    venue: "ICLR 2023 (Spotlight)"
+    path: /assets/project/d4ft/
+    ORlink: "https://openreview.net/forum?id=aBWnqqsuot7"
+    githublink: "https://github.com/sail-sg/d4ft"
+    intro: In this work, we propose a deep learning approach to KS-DFT. We propose to directly minimize the total energy by reparameterizing the orthogonal constraint as a feed-forward computation. We prove that such an approach has the same expressivity as the SCF method, yet reduces the computational complexity from O(N^4) to O(N^3).
+    Keywords:
+
+  - name: nonparametric
+    title: "Nonparametric Generative Modeling with Conditional Sliced-Wasserstein Flows"
+    author: Chao Du, Tianbo Li, Tianyu Pang, Shuicheng YAN, Min Lin
+    venue: ICML 2023
+    path: /assets/project/nonparametric/
+    ORlink: https://openreview.net/forum?id=cOngPVufCF
+    intro: In this work, we make two major contributions to bridging this gap. Based on a pleasant observation that (under certain conditions) the SWF of joint distributions coincides with those of conditional distributions, we propose CSWF that enables nonparametric conditional modeling. We introduce appropriate inductive biases of images into SWF which greatly improve the efficiency and quality of modeling images. 
+    
+  - name: nif
+    title: "Neural Integral Functionals"
+    venue: ICLR 2023 Workshop Physics4ML
+    author: Zheyuan Hu, Tianbo Li, Zekun Shi, Kunhao Zheng, Giovanni Vignale, Kenji Kawaguchi, Shuicheng Yan, Min Lin
+    path: /assets/project/nif/
+    ORlink: https://openreview.net/forum?id=aQuqw6eVKP
+    intro: "In this work, we propose neural integral functional (NIF), which is a general functional approximator that suits a large number of scientific problems including the brachistochrone curve problem in classical physics and density functional theory in quantum physics."
+
+
+  - name: kdd
+    title: "Mitigating Performance Saturation in Neural Marked Point Processes: Architectures and Loss Functions"
+    author: Tianbo Li, Tianze Luo, Yiping Ke, Sinno Jialin Pan
+    venue: SIGKDD 2021
+    githublink: https://github.com/ltz0120/Graph-Convolutional-Hawkes-Processes-GCHP
+    path: /assets/project/kdd/
+    intro: This work introduces a Graph Convolutional Hawkes Process (GCHP) method incorperating marked point processes model to deal with predictions on attributed event sequences.
+
+
+  

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Introduction To Density Functional Theory | Tianbo Li</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Introduction To Density Functional Theory" />
+<meta name="author" content="Tianbo Li, Min Lin" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Hohenburg-Kohn Theorems It can be seen that the density functionals significantly reduce the computaional complexity in many ways, but the question is, did the single electron density tell you all needed for calculating the ground state energy of a many-body quantum system. A short answer is yes. The following Hohenburg-Kohn theorems state the relation between ground state energy and the electron density. Theorem 1. The ground-state energy and all other ground-state electronic properties are uniquely determined by the electron density." />
+<meta property="og:description" content="Hohenburg-Kohn Theorems It can be seen that the density functionals significantly reduce the computaional complexity in many ways, but the question is, did the single electron density tell you all needed for calculating the ground state energy of a many-body quantum system. A short answer is yes. The following Hohenburg-Kohn theorems state the relation between ground state energy and the electron density. Theorem 1. The ground-state energy and all other ground-state electronic properties are uniquely determined by the electron density." />
+<link rel="canonical" href="http://localhost:4000/2023/03/13/introduction-to-density-functional-theory.html" />
+<meta property="og:url" content="http://localhost:4000/2023/03/13/introduction-to-density-functional-theory.html" />
+<meta property="og:site_name" content="Tianbo Li" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-13T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Introduction To Density Functional Theory" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tianbo Li, Min Lin"},"dateModified":"2023-03-13T00:00:00+08:00","datePublished":"2023-03-13T00:00:00+08:00","description":"Hohenburg-Kohn Theorems It can be seen that the density functionals significantly reduce the computaional complexity in many ways, but the question is, did the single electron density tell you all needed for calculating the ground state energy of a many-body quantum system. A short answer is yes. The following Hohenburg-Kohn theorems state the relation between ground state energy and the electron density. Theorem 1. The ground-state energy and all other ground-state electronic properties are uniquely determined by the electron density.","headline":"Introduction To Density Functional Theory","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2023/03/13/introduction-to-density-functional-theory.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"},"name":"Tianbo Li, Min Lin"},"url":"http://localhost:4000/2023/03/13/introduction-to-density-functional-theory.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tianbo Li" />
+
+
+
+
+  <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans|Roboto|Roboto%20Slab|Inconsolata|Dancing%20Script|Noto%20Sans%20SC|Noto%20Sans%20TC|Noto%20Serif%20SC|Noto%20Serif%20TC|Ma%20Shan%20Zheng">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/skin.css">
+
+<!-- Begin selecting skin -->
+
+<!-- End selecting skin -->
+
+<script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+  </head>
+
+  <body>
+    <div class="site-container">
+      <header class="site-header">
+        <div class="wrapper">
+  <script>
+    function clickSidebarButton() {
+      const elem = document.getElementById("site-sidebar")
+      if (elem.style.display == "none" || elem.style.display == "") {
+        elem.style.display = "block";
+      } else {
+        elem.style.display = "none";
+      }
+    }
+  </script>
+  <a class="site-sidebar-button" onclick="clickSidebarButton()"><i class="far fa-user"></i>
+  </a>
+
+  <a class="site-title" rel="author" href="/">Tianbo Li</a>
+
+  
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger" title="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+          </svg>
+        </span>
+      </label>
+
+      <ul class="trigger">
+              <li><a class="" href="/blog/">Blog</a></li>
+            </ul>
+    </nav>
+  
+</div>
+
+      </header>
+      
+      <div class="site-body wrapper">
+        <aside class="site-sidebar" id="site-sidebar">
+          
+            <div class="sidebar-section"><img src="/profile.png" class="author-avatar u-photo align-center" alt="Tianbo Li">
+  </div>
+
+<div class="sidebar-section">
+  <ul class="contact-list">
+    <li>
+        <i class="sidebar-icon fas fa-user"></i>
+        <span class="contact-info p-name" style="font-size: 16px; font-weight: bold;">Tianbo Li</span>
+      </li>
+    <li>
+        <i class="sidebar-icon fas fa-envelope"></i>
+        <a class="contact-info u-email" href="mailto:litb@sea.com">litb@sea.com</a>
+      </li>
+    <li>
+      <i class="sidebar-icon fas fa-envelope"></i>
+      <a class="contact-info u-email2" href="mailto:li_tianbo@live.com">li_tianbo@live.com</a>
+    </li>
+    <li>
+        <i class="sidebar-icon fas fa-location-arrow"></i>
+        <a class="contact-info u-location" href="https://www.google.com/maps/search/Singapore">Singapore</a>
+      </li>
+  </ul>
+</div>
+
+
+
+<div class="sidebar-section">
+    <ul class="social-icons">
+      <li>
+          <a class="social-icon" href="https://github.com/nicktianboli"><i class="fab fa-github fa-2x" title="GitHub"></i></a>
+        </li><li>
+          <a class="social-icon" href="https://www.linkedin.com/in/tianbo-l-387a45255/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a>
+        </li><li>
+          <a class="social-icon" href="https://sail.sea.com/"><i class="fas fa-building fa-2x" title="SAIL"></i></a>
+        </li>
+    </ul>
+  </div>
+
+          
+        </aside>
+        <main class="site-main" id="site-main" aria-label="Content" tabindex="1">
+          <style>
+  * {
+    border: none !important;
+  }
+</style>
+
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <a href="/blog.html">
+      <h1 class="post-title p-name" itemprop="name headline" style="font-size: 32px; border: none;">Introduction To Density Functional Theory</h1>
+    </a>
+    <p class="post-meta" style="margin-bottom: 5px; border: none;">
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name", style="place-items: center">Tianbo Li, Min Lin</span></span><br>
+        
+        <time class="dt-published" datetime="2023-03-13T00:00:00+08:00" itemprop="datePublished" style="place-items: center">
+          Mar 13, 2023
+        </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody" style="font-size: 
+  18px; font-family: Open Sans; margin-top: -100px; border: none", >
+    <h3 id="hohenburg-kohn-theorems">Hohenburg-Kohn Theorems</h3>
+<p>It can be seen that the density functionals significantly reduce the computaional complexity in many ways, but the question is, did the single electron density tell you all needed for calculating the ground state energy of a many-body quantum system. A short answer is yes. The following Hohenburg-Kohn theorems state the relation between ground state energy and the electron density.</p>
+
+<blockquote>
+  <p><span style="color:#AF2406"> Theorem 1. The ground-state energy and all other ground-state electronic properties are uniquely determined by the electron density. </span></p>
+</blockquote>
+
+<blockquote>
+  <p><span style="color:#AF2406"> Theorem 2. For a trial density function $n’(\boldsymbol r)$, the energy functional $E[n’(\boldsymbol r)]$ cannot be less than the true ground-state energy of the molecule. </span></p>
+</blockquote>
+
+<p>Hohenburg-Kohn theorems tell that the ground-state energy of a quantum system is an one-to-one mapping to its density $n(\boldsymbol r)$, which enable the application of density functional theory.</p>
+
+<h3 id="constrained-search-form">Constrained Search Form</h3>
+
+<p>As Hohenburg-Kohn theorem tells us the existence of such functional $E$ such that $E(n(r))$ is the energy of the system. We can then search for the density that minimizes this energy to find the ground state.</p>
+
+\[\min_{n(r)} E(n(r))\]
+
+<p>However, the exact form of $E$ is not generally available. The constrained search form give an exact definition:</p>
+
+\[\begin{align}
+\min_{n(r)} &amp;\min_{\Psi}\left&lt;\Psi|H|\Psi\right&gt;\\
+s.t.&amp; \quad N\int_{r_2,\cdots,r_n}\Psi^2(r)=n(r_1)
+\end{align}\]
+
+<p>Namely, $E$ itself is an optimization that finds the minimum energy, given the density $n(r)$ is known before hand.</p>
+
+<h3 id="kohn-sham-dft">Kohn-Sham DFT</h3>
+
+<p>First let’s see the conclusion, the functional can be separated into a few terms,</p>
+
+\[E(n)=T(n)+E_{ext}(n)+E_H(n)+E_{xc}(n)\]
+
+<p>This is possible only if we make certain assumptions on the wave function. Because otherwise the kinetic energy will be dependent on the wave function $\Psi$ instead of the density $n$.</p>
+
+<p>This key assumption is that the electrons are non-interacting. Kohn-Sham DFT assumes non-interacting particles that has orthogonal wave functions. If we use Slater determinant to construct the many body wave function, it is as follows.</p>
+
+<p>\(\Psi(\mathbb{x})=\frac{1}{\sqrt{n!}}\sum_{\pi}\sigma(\pi)\prod_i^n\phi_i(x_{\pi[i]})\)
+Note that in Kohn-Sham DFT, the $\phi$-s are subject to,
+\(\left&lt;\phi_i|\phi_j\right&gt;=\delta_{i,j}\)</p>
+
+<h4 id="kinetic-energy">Kinetic Energy</h4>
+<p>Applying the Kinetic part of Hamiltonian on $\Psi$</p>
+
+\[\begin{align}
+-\nabla^2\Psi(\mathbb{x})&amp;=
+-\frac{1}{\sqrt{n!}}\sum_\pi\sigma(\pi)\sum_{j=1}^n\prod_{i\neq{j}}^n\phi_{\pi^{-1}(i)}(x_{i})\nabla^2\phi_{\pi^{-1}(j)}(x_{j})
+\end{align}\]
+
+<p>Kinetic Energy is</p>
+
+\[\begin{align}
+\int\Psi^*(\boldsymbol{x})\hat{T}\Psi(\boldsymbol{x})d\boldsymbol{x}&amp;=-\frac{1}{2}\int\Psi^*(\boldsymbol{x})\nabla^2\Psi(\boldsymbol{x})\\
+&amp;=-\frac{1}{2}\frac{1}{N!}\sum_{\pi}\sigma^2(\pi)\sum_{j}^N\int\phi^*_{\pi^{-1}(j)}(x_j)\nabla^2\phi_{\pi^{-1}(j)}(x_j)dx_j\prod_{i\neq{j}}^n\int_{x_{i}}\phi_{\pi^{-1}(i)}^2(x_{i})dx_i\\
+&amp;=-\frac{1}{2}\frac{1}{N!}\sum_{\pi}\sum_{j}^N\int\phi^*_{\pi^{-1}(j)}(x_{j})\nabla^2\phi_{\pi^{-1}(j)}(x_j)dx_j\\
+&amp;=-\frac{1}{2}\frac{1}{N!}N!\sum_j^N\int\phi^*_j(x)\nabla^2\phi_j(x)dx\\
+&amp;=-\frac{1}{2}\sum_{j=1}^N\int\phi^*_j(x)\nabla^2\phi_j(x)dx\\
+&amp;=\sum_j^N\hat{T}_j
+\end{align}\]
+
+<p>Which is equal to sum of per particle kinetic energy.</p>
+
+<h4 id="electron-electron-repulsion-energy">Electron-Electron Repulsion Energy</h4>
+
+\[\begin{align}
+E_{ee}&amp;=\int_\mathbb{x} p(\mathbb{x})\sum_{a&lt;b}\frac{1}{|x_a-x_b|}\\
+&amp;=\frac{1}{2}\int_\mathbb{x}\Psi^2(\mathbb{x})\sum_{a\neq b}\frac{1}{|x_a-x_b|}\\
+&amp;=\frac{1}{2}\frac{1}{n!}\int_\mathbb{x}\sum_{\pi,\pi'}\sigma(\pi)\sigma(\pi')\prod_j^n\phi^*_{\pi^{-1}(j)}(x_j)\prod_k^n\phi_{\pi'^{-1}(k)}(x_k)\sum_{a\neq b}\frac{1}{|x_a-x_b|}
+\end{align}\]
+
+<p>For terms with $\pi$ and $\pi’$ such that $\pi^{-1}(j)\neq \pi’^{-1}(j)$ for any $j\not\in{a,b}$, the integration will be zero.</p>
+
+<p><strong>Two terms are left</strong>,</p>
+
+<p><strong>first term</strong> where $\pi=\pi’$</p>
+
+\[\begin{align}
+&amp;\frac{1}{2n!}\int_\mathbb{x}\sum_{\pi}\prod_j^n\phi^2_{\pi^{-1}(j)}(x_j)\sum_{a\neq b}\frac{1}{|x_a-x_b|}\\
+=&amp;\frac{1}{2n!}\sum_{\pi}\sum_{a\neq b}\int_{x_a,x_b}\phi^2_{\pi^{-1}(a)}(x_a)\phi^2_{\pi^{-1}(b)}(x_b)\frac{1}{|x_a-x_b|}\\
+=&amp;\frac{1}{2}\sum_{a\neq b}\int_{x_1,x_2}\phi^2_{a}(x_1)\phi^2_{b}(x_2)\frac{1}{|x_1-x_2|}
+\end{align}\]
+
+<p>We can also rewrite it as,</p>
+
+\[\begin{align}
+&amp;\frac{1}{2}\int_{x_1,x_2}\sum_{a,b}\phi^2_{a}(x_1)\phi^2_{b}(x_2)\frac{1}{|x_1-x_2|}-\sum_{a}\phi^2_{a}(x_1)\phi^2_{a}(x_2)\frac{1}{|x_1-x_2|}\\
+=&amp;\frac{1}{2}\int_{x_1,x_2}\rho(x_1)\rho(x_2)\frac{1}{|x_1-x_2|}-\sum_{a}\phi^2_{a}(x_1)\phi^2_{a}(x_2)\frac{1}{|x_1-x_2|}
+\end{align}\]
+
+<p><strong>Another term</strong> is when $\pi$ and $\pi’$ differs by swapping $a$ and $b$.</p>
+
+\[\begin{align}
+&amp;-\frac{1}{2}\sum_{a\neq b}\int_{x_1,x_2}\phi^*_{a}(x_1)\phi^*_b(x_1)\phi_{a}(x_2)\phi_{b}(x_2)\frac{1}{|x_1-x_2|}\\
+=&amp;-\frac{1}{2}\int_{x_1,x_2}\sum_{a,b}\phi^*_{a}(x_1)\phi^*_b(x_1)\phi_{a}(x_2)\phi_{b}(x_2)\frac{1}{|x_1-x_2|}+\sum_{a}\phi^2_{a}(x_1)\phi^2_{a}(x_2)\frac{1}{|x_1-x_2|}
+\end{align}\]
+
+<p>Note that the second terms cancel each other.</p>
+
+<p>Therefore,</p>
+
+\[\begin{align}
+&amp;\frac{1}{2}\int_{x_1,x_2}\rho(x_1)\rho(x_2)\frac{1}{|x_1-x_2|}-\sum_{a,b}\phi^*_{a}(x_1)\phi^*_b(x_1)\phi_{a}(x_2)\phi_{b}(x_2)\frac{1}{|x_1-x_2|}\\
+=&amp;\frac{1}{2}\int_{x_1,x_2}\left(\rho(x_1)\rho(x_2)-\left|\sum_{a}\phi^*_{a}(x_1)\phi_{a}(x_2)\right|^2\right)\frac{1}{|x_1-x_2|}
+\end{align}\]
+
+<p>More often, we write 
+\(\begin{align}
+\rho_S(x_1,x_2)=&amp;\left(\rho(x_1)\rho(x_2)-\left|\sum_{a}\phi^*_{a}(x_1)\phi_{a}(x_2)\right|^2\right)\\
+=&amp;\rho(x_1)\rho_S(x_2|x_1)\\
+=&amp;\rho(x_1)\rho(x_2)-h_X(x_2|x_1)\rho(x_1)
+\end{align}\)</p>
+
+<p>where $\rho_S$ is the joint probability of two particle, when the particles are non-interacting.</p>
+
+<p>This term treats the exchange exactly, when the wave function is constructed from Slater determinant of orthonormal orbitals. However, due to the mean field assumption, the correlation is missing. In DFT, this term together with the correlation error are writen as $E_{xc}$.</p>
+
+<p>So finally, we get that</p>
+
+\[V_{ee}=\underbrace{\int\rho(r_1)\rho(r_2)\frac{1}{|r_1-r_2|}}_{E_H}+\underbrace{\int-\rho(r_1)h_X(r_2|r_1)\frac{1}{|r_1-r_2|}}_{E_X}\]
+
+<h4 id="exc-and-lda">Exc and LDA</h4>
+<p>A simple exchange energy density approximation is the local density approximation (LDA)</p>
+
+\[E_{\rm x}^{\mathrm{LDA}}[n] = - \frac{3}{4}\left( \frac{3}{\pi} \right)^{1/3}\int n(\mathbf{r})^{4/3}\ \mathrm{d}\mathbf{r}\]
+
+<h3 id="density-functionals">Density functionals</h3>
+<p>&lt;img src=https://i.imgur.com/I9SP2Lj.png alt=”drawing” width=”600”/&gt;</p>
+
+<p>Unlike the wave functional methods, DFT methods utilize the marginal electron density $n(\boldsymbol r)$ as input, and derive all kinds of functionals for approximating the ground state energy. A typical method computes the ground state energy in the following manner:
+\begin{equation}
+E[n(\boldsymbol r)] = \underbrace{E_{kin}[n(\boldsymbol r)]}<em>{\text{kinetic energy} \  \text{functional}}+ \underbrace{E</em>{ext}[n(\boldsymbol r)]}<em>{\text{external potential} \  \text{energy functional}} + \underbrace{E</em>{ele}[n(\boldsymbol r)]}<em>{\text{electron repulsion} \  \text{energy functional}} +\underbrace{E</em>{xc}[n(\boldsymbol r)]}_{\text{exchange-correlation} \  \text{energy functional}} 
+\end{equation}</p>
+
+<p>One of the earliest schemes for the density functional is the <strong>Thomas-Ferimi method</strong>. Each component can be defined by,
+\begin{align}
+E_{TF}:&amp;= E_k[n(\boldsymbol r)] + E_{xc}[n(\boldsymbol r)] <br />
+&amp;=\dfrac{3}{10}(3\pi^2)^{2/3} \int n(\boldsymbol r)^{5/3}d\boldsymbol r <br />
+E_{ext}&amp;= \int n(\boldsymbol r) v_{ext}(\boldsymbol r) d\boldsymbol r<br />
+E_{ele}&amp;= \dfrac12\int \int \dfrac{n( \boldsymbol r)n( \boldsymbol r’)}{|\boldsymbol r - \boldsymbol r’|} d\boldsymbol r d \boldsymbol r’.
+\end{align}</p>
+<blockquote>
+
+</blockquote>
+
+<h3 id="kohn-sham-equation">Kohn-sham equation</h3>
+<p>In VMC and other many body wave function methods, the wave function often takes a 3N- or 4N-dimensional variable as input, which results in an expensive compututation load. Kohn-sham methods, equation is defined by,
+\begin{align}
+    \left(  -\dfrac{1}{2}\nabla ^2 +  v_{eff}(\boldsymbol{r})  \right) \psi_i (\boldsymbol{r}) =  \varepsilon \psi_i(\boldsymbol{r} )
+\end{align}</p>
+
+<p>where $v_{eff}(\boldsymbol{r})$ is the effective potential defined by,
+\(\begin{align}
+v_{eff}(\boldsymbol{r})  = v_{ext}(\boldsymbol{r}) + \int d^3 \boldsymbol{r}' \dfrac{n(\boldsymbol{r}')}{\vert \boldsymbol{r} - \boldsymbol{r}'\vert}  + v_{xc}(\boldsymbol{r}),
+\end{align}\)
+and
+\begin{align}
+    n(\boldsymbol{r}) = \sum_{i=1}^{N}\big\vert{\psi_i(\boldsymbol{r} )}\big\vert^2,
+\end{align}
+in which $N$ is the total number of electrons.</p>
+
+<h4 id="non-interacting-electrons">Non-interacting electrons</h4>
+
+<p><img src="https://i.imgur.com/pRV5u0H.png" alt="" /></p>
+
+<h4 id="optimization">Optimization</h4>
+<h5 id="self-consistency-field-method">Self-consistency Field method.</h5>
+<p><img src="https://i.imgur.com/oxsMIQy.png =500x" alt="" /></p>
+
+<p>The total energy of kohn-sham equation with respect to single particle wave function can be expressed as
+\begin{align}
+E_{gs} &amp;  %\sum_i^N \min_{\psi_i} \langle \psi_i |\hat h_i |\psi_i \rangle <br />
+=\sum_i^N \min_{\psi_i} \Big{ -\int \psi_i(\boldsymbol{r}) \left( \dfrac12\nabla^2 \psi_i(\boldsymbol{r}) \right) d\boldsymbol{r} - \int v_{ext}(\boldsymbol{r}) |\psi_i(\boldsymbol{r})|^2 d\boldsymbol{r} <br />
+&amp; +  \dfrac12\int \int  \dfrac{|\psi_i(\boldsymbol{r})|^2|\psi_i(\boldsymbol{r}’)|^2}{\vert \boldsymbol{r}-\boldsymbol{r}’ \vert}d\boldsymbol{r}d\boldsymbol{r}’  + \int v_{xc}\big({\psi_j(\boldsymbol{r} )} \big) |\psi_i(\boldsymbol{r})|^2 d\boldsymbol{r}
+\Big}
+\end{align}
+Let $s$ denote the single-particle energy:
+\begin{equation}
+s(\psi_i) :=  -\int \psi_i(\boldsymbol{r}) \left( \dfrac12\nabla^2 \psi_i(\boldsymbol{r}) \right) d\boldsymbol{r} -  \int v_{ext}(\boldsymbol{r}) |\psi_i(\boldsymbol{r})|^2 d\boldsymbol{r} + \int v_{xc}(\boldsymbol{r}) |\psi_i(\boldsymbol{r})|^2 d\boldsymbol{r}
+\end{equation}
+and then the total energy can be simplified as
+\begin{align}
+E &amp;=   \sum_i^N \min_{\psi_i}  \left{ s(\psi_i) +\dfrac12 \int \int  \dfrac{|\psi_i(\boldsymbol{r})|^2|\psi_i(\boldsymbol{r}’)|^2}{\vert \boldsymbol{r}-\boldsymbol{r}’ \vert}d\boldsymbol{r}d\boldsymbol{r}’   \right} <br />
+&amp;= \sum_i^N \min_{\psi_i}  \left{ s(\psi_i) + \int \int  \dfrac{|\psi_i^{\text{old}}(\boldsymbol{r})|^2|\psi_i(\boldsymbol{r}’)|^2}{\vert \boldsymbol{r}-\boldsymbol{r}’ \vert}d\boldsymbol{r}d\boldsymbol{r}’  - \int \int  \dfrac{\left( |\psi_i^{\text{old}}(\boldsymbol{r})|^2  -\dfrac12 |\psi_i(\boldsymbol{r})|^2\right)|\psi_i(\boldsymbol{r}’)|^2}{\vert \boldsymbol{r}-\boldsymbol{r}’ \vert}d\boldsymbol{r}d\boldsymbol{r}’  \right} <br />
+\end{align}</p>
+
+<h4 id="updating-psi_i-in-the-kohn-sham-equation">Updating $\psi_i$ in the Kohn-Sham Equation.</h4>
+<p>The Kohn-Sham Equation is minimizing:
+\begin{align}
+\sum_i^N \min_{\psi_i}  \left{ s(\psi_i) + \int \int  \dfrac{|\psi_i^{\text{old}}(\boldsymbol{r})|^2|\psi_i(\boldsymbol{r}’)|^2}{\vert \boldsymbol{r}-\boldsymbol{r}’ \vert}d\boldsymbol{r}d\boldsymbol{r}’ \right} 
+\end{align}</p>
+
+<p>It suffices to see that when update $\psi_i$ the reminder term does not increase. Let $\psi_i^{\text{old}}$ be fixed, we have</p>
+
+<p>\begin{align}
+&amp;\int \int  \dfrac{\left(|\psi_i^{\text{old}}(\boldsymbol{r})|^2  -\dfrac12 |\psi_i(\boldsymbol{r}’)|^2\right)|\psi_i(\boldsymbol{r}’)|^2}{\vert \boldsymbol{r}-\boldsymbol{r}’ \vert}d\boldsymbol{r}d\boldsymbol{r}’  <br />
+=&amp; - \dfrac12 \int \int  \dfrac{ \left(|\psi_i^{\text{old}}(\boldsymbol{r})|^2 -|\psi_i(\boldsymbol{r}’)|^2\right)^2 }{\vert \boldsymbol{r}-\boldsymbol{r}’ \vert }d\boldsymbol{r}d\boldsymbol{r}’ + \text{Const}
+\end{align}
+It can be seen that when updating $\psi_i$ with $\psi_i^{\text{old}}$ fixed, the above term will always be negative.</p>
+
+<h4 id="updating-psitextold_i-leftarrow-psi_i-">Updating $\psi^{\text{old}}_i \leftarrow \psi_i$ .</h4>
+<p>Obviously the reminder term become zero, and $s(\psi_i)$ does not change as we update  $\psi^{\text{old}}_i$, we only need to prove that 
+\begin{align}
+\int \int  \dfrac{|\psi_i^{\text{old}}(\boldsymbol{r})|^2|\psi_i(\boldsymbol{r}’)|^2}{\vert \boldsymbol{r}-\boldsymbol{r}’ \vert}d\boldsymbol{r}d\boldsymbol{r}’ \leqslant \int \int  \dfrac{|\psi_i(\boldsymbol{r})|^2|\psi_i(\boldsymbol{r}’)|^2}{\vert \boldsymbol{r}-\boldsymbol{r}’ \vert}d\boldsymbol{r}d\boldsymbol{r}’.
+\end{align}</p>
+
+<p>We can see that this is acutally a similarity measure between two density functions:
+\begin{equation}
+D(n^{\text{old}}, n) := \mathbb{E}<em>{\boldsymbol{r}\sim n^{\text{old}}} \mathbb{E}</em>{\boldsymbol{r}’\sim n} \left[\dfrac{1}{\vert \boldsymbol{r}-\boldsymbol{r}’ \vert} \right] 
+\end{equation}</p>
+
+<p>Therefore, the above similarity measure reach maxima when $n^{\text{old}} = n$.</p>
+
+<h3 id="learning-orthonormal-wave-functions">Learning orthonormal wave functions</h3>
+<h4 id="basis-set">Basis set</h4>
+<p><img src="https://i.imgur.com/XdyShhO.png" alt="" /></p>
+
+<p>One of the most commonly-used basis function is the Gaussian-type orbitals (GTO). A Gaussian basis centered at $\boldsymbol{r}’= (x’, y’, z’)^\top$ of order $l, m, n$ is defined by,
+\begin{equation}
+    g_{l, m, n}(\boldsymbol{r}; \zeta, \boldsymbol{r}’) = c(x-\boldsymbol{r}’_x)^l(y-\boldsymbol{r}’_y)^m(z-\boldsymbol{r}’_z)^n e^{-\zeta\Vert \boldsymbol{r}-\boldsymbol{r}’\Vert^2}
+\end{equation}
+with normalization constant:
+\begin{equation}
+    c = \left(  \dfrac{2\zeta}{\pi} \right)^{\frac34} \left( \dfrac{(8\zeta)^{l+m+n} l!m!n! }{(2l)!(2m)!(2n)!}\right)^{\frac12}
+\end{equation}</p>
+
+<h5 id="atomic-orbitals">Atomic orbitals.</h5>
+<p>Atomic orbitals is defined by a linear combination of Gaussian basis:
+\(\phi_k(x) = \sum_i c_{ki} g_i\)
+where the parameter of the Gaussian basis and $c_{ki}$ can be loaded from the basis sets.</p>
+
+<h5 id="molecular-orbitals">Molecular orbitals.</h5>
+<p>Molecular orbitals is also a linear combination of atomic orbitals (LCAO):
+\(\psi_j(x) = \sum_k^N \alpha_{jk} \phi_k(x)\)
+and $\alpha_{jk}$ are the paramters that need to be learned.</p>
+
+<p>Here we introduce a vectorized notation
+\(\begin{align}
+\boldsymbol \Psi = (\psi_1, \psi_2, \cdots, \psi_N)^\top :&amp;= A \boldsymbol (\phi_1, \phi_2, \cdots, \phi_N)^\top \\
+:&amp;= A \boldsymbol \Phi
+\end{align}\)</p>
+
+<h4 id="orthogonalization">Orthogonalization</h4>
+<p>The molecular orbitals must satisfy the orthogonal condition.</p>
+
+\[\langle\psi_i|\psi_j\rangle=\delta_{ij}.\]
+
+<p>However, the Gaussian-type basis many not be orthogonal, ie.</p>
+
+\[|\boldsymbol \Phi \rangle \langle \boldsymbol \Phi |  \neq \boldsymbol I\]
+
+<p>Therefore we need to apply a PCA-like methods to get orthogonal orbitals.</p>
+
+<p>Denote $\boldsymbol B := |\boldsymbol \Phi \rangle \langle \boldsymbol \Phi |$, and apply eigen-decomposition we have:
+\(U\Sigma U^\top = \boldsymbol B\)</p>
+
+<p>Let
+\(D = U^\top \Sigma^{-1/2}\)</p>
+
+<p>Thus
+\(D^\top D = B^{-1}\)</p>
+
+<p>Then it can be seen that:
+\(|\boldsymbol \Psi \rangle \langle \boldsymbol \Psi | = A \boldsymbol B A^\top\)</p>
+
+<p>Therefore, if A is an orthogonal matrix, then the wave functions are orthogonal.</p>
+
+<p>Let $Q,R=\mathrm{QR}(\Theta)$, where $\Theta$ is a trainable paramter. Since QR decomposition is differentiable, it is possible to use $A$ to calculate the energy, and pass the gradient to $\Theta$.</p>
+
+<!-- 
+In DFT methods, $\psi$ is represented a weighted sum of analytical basis functions $\{g_i\}$.
+$$\psi_i(x)=\sum_kW_{ik}g_k(x)$$
+
+where $W_{ik}$ is the $\{i,k\}$th element in the matrix $W$. Let $B_{k,k'}=\langle g_k|g_{k'}\rangle$, 
+$$\langle\phi_i|\phi_j\rangle=\delta_{ij}=\int_x\sum_{k,k'}W_{ik}b_k(x)W_{jk'}g_{k'}(x)=W_iBW_j^\top$$
+
+Namely, we need to constrain $WBW^\top=I$. If we perform cholesky decomposition $B=LL^\top$, it becomes $WL(WL)^\top=I$. Therefore, we can parameterize $W$ with parameter matrix $\Theta$, let $Q,R=\mathrm{QR}(\Theta)$, then $W=QL^{-1}$. Since QR decomposition is differentiable, it is possible to use $W$ to calculate the energy, and pass the gradient to $\Theta$. -->
+
+<h4 id="numerical-integration">Numerical integration</h4>
+<p>In the implementation of DFT, the integrals are computing via numberical methods such as Gaussian quadrature or monte carlo intergration.</p>
+
+<h5 id="gauss-quadrature">Gauss Quadrature</h5>
+<p>Suppose we have a polynorminal function:
+\(f(x) = \sum_n c_n x^n\)</p>
+
+<p>We would like to know the following integral:
+\(\int_{-1}^{1} f(x) dx \approx \sum_i w_i f(x_i)\)</p>
+
+<p>The question is that, how can we find a set of points ${ x_i }$  and a set of weights ${ w_i }$ such that the above summation will be close enough to the integral?</p>
+
+<p>We can see that the LHS of the above equation can be written as,
+\(\int_{-1}^{1} f(x) dx =  \sum_n c_n \int_{-1}^{1} x^ndx\)</p>
+
+<p>The RHS can be written as,
+\(\sum_i w_i f(x_i) = \sum_i w_i  \sum_n c_n x_i^n = \sum_n c_n  \sum_i w_i x_i^n\)</p>
+
+<p>Therefore, the following equation must holds for each $n$.
+\(\int_{-1}^{1} x^ndx = \sum_i w_i x_i^n\)</p>
+
+<p>Apparently the integral of LHS can be easily obtained by analycial integration, and hence we have a system of equations with 2m parameters:
+\begin{align}
+    w_1 + w_2 + \cdots + w_k &amp;= 0<br />
+    w_1x_1+ w_2x_2 + \cdots + w_kx_k &amp;= 0 <br />
+    w_1x_1^2 + w_2x_2^2 + \cdots + w_kx_k^2 &amp;= \dfrac23 <br />
+     w_1x_1^3 + w_2x_2^3 + \cdots + w_kx_k^3 &amp;= 0 <br />
+     \vdots
+\end{align}</p>
+
+<p>Solving the above equation we can get ${w_i}$ and ${x_i}$.</p>
+
+<h5 id="gauss-legendre-quaduature">Gauss-Legendre Quaduature</h5>
+<p>The typical Gauss Quaduature requires (2k-1) equations for sovling the system and get the points and associated weights. This can be simplified by using orthogonal basis.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    
+
+    
+
+    <nav class="post-pagination" role="navigation">
+      
+        <a class="post-previous" href="/2023/01/20/basis-in-quantum-chemistry.html">
+          <h4 class="post-pagination-label">Prev</h4>
+          <span class="post-pagination-title">
+            <i class="fas fa-arrow-left"></i> Basis In Quantum Chemistry
+
+          </span>
+        </a>
+      
+
+      
+        <a class="post-next" href="/2023/07/08/algorithms-for-top-k-eigenvalues.html">
+          <h4 class="post-pagination-label">Next</h4>
+          <span class="post-pagination-title">
+            Algorithms For Top K Eigenvalues
+ <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+      
+    </nav>
+  </footer>
+
+  
+  
+</article>
+
+          <footer class="site-footer">
+            
+<div class="footer-col-wrapper" style="border:none;">
+
+  <div class="footer-col">
+    <div class="copyright" style="border:none;">
+      
+      
+      
+      
+      <p>Copyright © 2023 Tianbo Li; All rights reserved.</p>
+      
+    </div>
+    <p>
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a>
+    </p>
+  </div>
+
+  <!-- <div class="footer-col">
+    <p>Personal homepage.</p>
+  </div> -->
+</div>
+
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

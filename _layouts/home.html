@@ -4,9 +4,49 @@ layout: default
 
 <style>
   .block {
+    font-size: 16px;
     border-bottom: 0.1px solid #c4c4c4;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: -30px;
+    padding-top: 30px;
+  }
+  .projectitem {
+      display: flex;
+      width: 100%;
+  }
+  .image {
+      flex: 2;
+  }
+  .content {
+      flex: 8;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .projecttext {
+      font-size: 12px;
+      flex: 9;
+      padding: 10px;
+  }
+  .buttons {
+      flex: 1;
+      display: flex;
+      align-items: left;
+      margin-left: 9px;
+      margin-top: -40px;
+  }
+  .venue {
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: normal;
+    margin-bottom: -5px;
+    margin-top: 0px;
+  }
+  .author {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    margin-top: -36px;
+    margin-bottom: 6px;
   }
 </style>
 
@@ -58,10 +98,32 @@ layout: default
     <h1>Tianbo Li</h1>
   </header>
   <p>
-    Tianbo Li is currently a research scientist at <a href="https://sail.sea.com/">SEA AI Lab</a>.
+    Tianbo Li is currently working as a research scientist at <a href="https://sail.sea.com/">SEA AI Lab</a>,
+    where his primary research area is <b style="font-family: Arial, sans-serif;">AI for Quantum Chemistry and Material Science. </b>
     He obtained his Ph.D from <a href="https://www.ntu.edu.sg/">Nanyang Technological University, Singapore</a>,
     under the supervison of <a href='https://scholar.google.com/citations?user=30Fp0YYAAAAJ&hl=en'> Prof. Yiping Ke</a>.
+    Prior to that, he recieved both his degrees of Bacholer and Master from the School of Statistcs, Renmin University of China.
+    Collaborating closely with <a href="https://cde.nus.edu.sg/mse/staff/novoselov-konstantin-sergeevich/"> Prof. Konstantin Novoselov FRS</a>,
+    Tianbo is actively involved with <a href="https://ifim.nus.edu.sg/">Institute for Functional Intelligent Materials (I-FIM)</a>.
+    Besides his focus on AI for Science, he also has a keen interest in statistical 
+    machine learning and exploring stochastic processes for deep learning.
   </p>
+</div>
+
+<div class=block>
+  <div style="display: flex;">
+    <div style="flex-basis: 10%; padding-right: 10px;">
+      <img src="/assets/image/hiring.png" alt="hiring" style="max-width: 100%; height: auto;">
+    </div>
+    <div style="flex-basis: 90%;">
+      <p>We are currently hiring research interns working on AI for Science (Quantum Chemistry), based in Singapore.
+        To learn more about our research, please see and apply via the following link: <br></p>
+      <p style="margin-top: -20px; margin-bottom: 15px; font-size:18px"> <a href="https://career.sea.com/position/J00215947"> application entrance </a> </p> 
+      <p>
+        If you find this position interested, feel free to email me your CV for consideration.
+      </p>
+    </div>
+  </div>
 </div>
 
 <div class=block>
@@ -73,7 +135,9 @@ layout: default
       {% for item in site.education_items %}
         <li>
           <!-- <span class="fa-li"><i class="fab fa-github"></i></span> -->
-          <img class="logo" src="{{ '/assets/image/' | relative_url }}{{ item.abbr | slugify }}.png" alt="{{ item.abbr }} logo">
+          <a href="{{ item.link }}" >
+            <img class="logo" src="{{ '/assets/image/' | relative_url }}{{ item.abbr | slugify }}.png" alt="{{ item.abbr }} logo">
+          </a>
           <h3 class="institution">{{ item.institution }}</h3>
           <p>{{ item.degree }} in {{ item.major }} <br>
             {{ item.date }}, {{ item.location }}</p>
@@ -85,16 +149,52 @@ layout: default
 
 <div class=block>
   <header>
-    <h2> Projects </h2>
+    <h2> Project </h2>
   </header>
+  <ul class="fa-ul">
+    {% for item in site.project_items %}
+      <p class="venue"> {{ item.venue }} </p>
+      <h4> {{ item.title }} </h4>
+      <p class="author"> {{ item.author }} </p>
+      <body>
+        <div class="projectitem">
+            <div class="image">
+                <img src="{{ item.path }}logo.png" alt="Image">
+            </div>
+            <div class="content">
+                <div class="projecttext">
+                    <!-- <h2>Title</h2> -->
+                    <p> {{ item.intro }}</p>
+                </div>
+                <div class="buttons">
+                    {%- if item.ORlink -%}
+                      [<a href="{{ item.ORlink }}" style="font-size: 16px;"> Open Review</a>]
+                    {%- endif -%}
+
+                    {%- if item.githublink -%}
+                      [<a href="{{ item.ORlink }}" style="font-size: 16px;"> Github</a>]
+                    {%- endif -%}
+
+                    [<a href="{{ item.path }}paper.pdf" style="font-size: 16px;"> Paper</a>]
+                    
+                </div>
+            </div>
+        </div>
+      </body>
+      <p>  </p>
+    {% endfor %}
+  </ul>
+ 
 </div>
 
 
+<head>
+
+</head>
+
+
 <!-- <div class="home">
-
-
   {{ content }}
-
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
   {% else %}

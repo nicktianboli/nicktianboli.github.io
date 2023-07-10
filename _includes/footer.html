@@ -1,7 +1,8 @@
-<div class="footer-col-wrapper">
+
+<div class="footer-col-wrapper" style="border:none;">
 
   <div class="footer-col">
-    <div class="copyright">
+    <div class="copyright" style="border:none;">
       {% assign year_from = site.posts[-1].date | date: '%Y' %}
       {% assign year_to   = site.time | date: '%Y' %}
       {% if year_from == nil or year_from == year_to %}
@@ -10,11 +11,11 @@
         {% assign year_string = year_from | append: '&nbsp;' | append: '-' | append: '&nbsp;' | append: year_to %}
       {% endif %}
       {% if site.author %}
-      <p>Copyright © {{ site.author }} {{ year_to }}; All rights reserved.</p>
+      <p>Copyright © {{ year_to }} {{ site.author }}; All rights reserved.</p>
       {% endif %}
     </div>
     <p>
-      Powered by <a href="https://jekyllrb.com/">Jekyll</a> 
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a>
     </p>
   </div>
 
