@@ -1,3 +1,5 @@
+- title: Blog
+  url: /blog/
 # - title: About
 #   url: /about/
 # - title: Years
@@ -13,5 +15,3 @@
 #     - title: Docs
 #       url: /docs/
 
-- title: Blog
-  url: /blog/

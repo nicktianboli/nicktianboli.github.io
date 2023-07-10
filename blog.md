@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Blog
+permalink: /blog/
 ---
 
 <!-- font-family:'Times New Roman', Times, serif; -->
